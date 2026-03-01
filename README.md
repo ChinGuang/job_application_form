@@ -1,3 +1,5 @@
+Learning purpose with only pure HTML, CSS and JavaScript
+
 ## Attribution
 
 "Abstract geometric logo or infinity line logo for your company"  
