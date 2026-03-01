@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Job Application Form</title>
+    </head>
+    <body>
+        <header>
+            <img
+                src="assets/images/company_logo.jpg"
+                alt="Company Logo"
+                width="100"
+                height="100"
+            />
+            <h1>Job Application Form</h1>
+        </header>
+        <form method="post" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullname">Full Name:</label>
+                <input
+                    type="text"
+                    id="fullname"
+                    name="full_name"
+                    minlength="3"
+                    required
+                />
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+                <label for="phone">Phone Number:</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    pattern="^(\\+?6?0)[0-9]{9,10}$"
+                    required
+                />
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required />
+                <label for="gender">Gender:</label>
+                <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    value="male"
+                    required
+                />
+                <label for="male">Male</label>
+                <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    value="female"
+                    required
+                />
+                <label for="female">Female</label>
+                <input
+                    type="radio"
+                    id="other"
+                    name="gender"
+                    value="other"
+                    required
+                />
+                <label for="other">Other</label>
+            </fieldset>
+            <fieldset>
+                <legend>Position Details</legend>
+                <label for="position">Position Apply</label>
+                <select id="position" name="position" required>
+                    <option value="intern">Intern</option>
+                    <option value="junior">Junior</option>
+                    <option value="senior">Senior</option>
+                </select>
+                <label for="salary" name="salary"> Expected Salary (RM) </label>
+                <input
+                    type="number"
+                    id="salary"
+                    name="salary"
+                    min="1500"
+                    max="50000"
+                    step="100"
+                    required
+                />
+                <label for="availabledate">Available Start Date</label>
+                <input
+                    type="date"
+                    id="availabledate"
+                    name="available_date"
+                    required
+                />
+                <label for="worktype">Work Type</label>
+                <input
+                    type="checkbox"
+                    id="remote"
+                    name="work_type"
+                    value="remote"
+                />
+                <label for="remote">Remote</label>
+                <input
+                    type="checkbox"
+                    id="onsite"
+                    name="work_type"
+                    value="onsite"
+                />
+                <label for="onsite">Onsite</label>
+                <input
+                    type="checkbox"
+                    id="hybrid"
+                    name="work_type"
+                    value="hybrid"
+                />
+                <label for="hybrid">Hybrid</label>
+            </fieldset>
+            <fieldset>
+                <legend>Skills & Experience</legend>
+                <label for="experience">Years of Experience</label>
+                <input
+                    type="number"
+                    id="experience"
+                    name="experience"
+                    min="0"
+                    max="40"
+                />
+                <label for="skills">Technical Skills</label>
+                <textarea id="skills" name="skills" minlength="20"></textarea>
+                <label for="portfolio">Portfolio URL</label>
+                <input type="url" id="portfolio" name="portfolio" />
+            </fieldset>
+            <fieldset>
+                <legend>File Upload</legend>
+                <label for="resume">Resume</label>
+                <input type="file" id="resume" name="resume" accept=".pdf" />
+                <label for="profilephoto">Profile Photo</label>
+                <input
+                    type="file"
+                    id="profilephoto"
+                    name="profile_photo"
+                    accept="image/*"
+                />
+            </fieldset>
+            <fieldset>
+                <legend>Account Setup</legend>
+                <label for="password"> Password </label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    minlength="8"
+                />
+                <label for="confirm_password"> Confirm Password </label>
+                <input
+                    type="password"
+                    id="confirm_password"
+                    name="confirm_password"
+                />
+                <label for="agreetoterm">Agree to Terms</label>
+                <input
+                    type="checkbox"
+                    id="agreetoterm"
+                    name="agree_to_term"
+                    required
+                />
+            </fieldset>
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>
