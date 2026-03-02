@@ -47,6 +47,20 @@ legend {
     font-weight: bold;
 }
 
+button {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
 @media (min-width: 768px) {
     fieldset {
         grid-template-columns: 1fr 1fr;
