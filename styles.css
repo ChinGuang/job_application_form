@@ -1,0 +1,54 @@
+header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.form-field {
+    display: flex;
+    width: 100%;
+    justify-content: stretch;
+    gap: 1rem;
+}
+
+.form-field .form-field-title {
+    flex: 1;
+}
+
+input:not([type="checkbox"]):not([type="radio"]),
+.form-options,
+select {
+    flex: 2;
+}
+
+.form-options {
+    display: flex;
+    justify-content: start;
+    gap: 1rem;
+}
+
+legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    fieldset {
+        grid-template-columns: 1fr 1fr;
+    }
+}
