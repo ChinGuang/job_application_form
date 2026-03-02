@@ -8,3 +8,11 @@ dobField.setAttribute("max", maxDob.toLocaleDateString());
 const availableDate = document.getElementById("availabledate");
 const minAvailableDate = new Date();
 availableDate.setAttribute("min", minAvailableDate.toLocaleDateString());
+
+const requiredFields = document.querySelectorAll('[required]');
+for (const field of requiredFields) {
+  const label = field.previousElementSibling;
+  if (label && label.tagName === "LABEL") {
+    label.innerHTML += "<span style='color:red;'>*</span>";
+  }
+}
