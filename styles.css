@@ -32,7 +32,8 @@ fieldset {
 
 input:not([type="checkbox"]):not([type="radio"]),
 .form-options,
-select {
+select,
+textarea {
     flex: 2;
 }
 
