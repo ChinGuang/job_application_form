@@ -3,7 +3,7 @@ console.log("script.js loaded");
 const dobField = document.getElementById("dob");
 const maxDob = new Date();
 maxDob.setFullYear(maxDob.getFullYear() - 18);
-dobField.setAttribute("max", maxDob.toLocaleDateString());
+dobField.setAttribute("max", maxDob.toISOString().split("T")[0]);
 
 const availableDate = document.getElementById("availabledate");
 const minAvailableDate = new Date();
