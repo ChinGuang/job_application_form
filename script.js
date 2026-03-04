@@ -7,7 +7,7 @@ dobField.setAttribute("max", maxDob.toISOString().split("T")[0]);
 
 const availableDate = document.getElementById("availabledate");
 const minAvailableDate = new Date();
-availableDate.setAttribute("min", minAvailableDate.toLocaleDateString());
+availableDate.setAttribute("min", minAvailableDate.toISOString().split("T")[0]);
 
 const requiredFields = document.querySelectorAll('[required]');
 for (const field of requiredFields) {
@@ -170,4 +170,34 @@ passwordInput.addEventListener("input", () => {
     }
   }
   strengthIndicator.setAttribute("data-strength", strength);
+});
+
+const confirmPasswordInput = document.getElementById("confirm_password");
+function validatePasswords() {
+  if (passwordInput.value !== confirmPasswordInput.value) {
+    confirmPasswordInput.setCustomValidity("Passwords do not match");
+    confirmPasswordInput.reportValidity();
+    return false;
+  } else {
+    confirmPasswordInput.setCustomValidity("");
+    return true;
+  }
+}
+confirmPasswordInput.addEventListener("input", () => {
+  validatePasswords();
+});
+const form = document.getElementsByTagName("form")[0];
+const submitButton = document.getElementById("submitButton");
+submitButton.addEventListener('click', function (event) {
+  event.preventDefault();
+
+  if (form.checkValidity() === true) {
+    if (!validatePasswords()) {
+      return;
+    }
+    console.log('Form is valid. Submitting...');
+    form.submit();
+  } else {
+    console.log('Form is invalid. Submission prevented.');
+  }
 });
