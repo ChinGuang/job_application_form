@@ -154,3 +154,20 @@ allInputs.forEach((input) => {
     }
   });
 });
+
+const passwordInput = document.getElementById("password");
+const strengthIndicator = document.getElementById("strength-fill");
+passwordInput.addEventListener("input", () => {
+  const password = passwordInput.value;
+  let strength = "none";
+  if (password.length >= 1) {
+    strength = "weak";
+    if (password.length >= 8) {
+      strength = "medium";
+      if (password.length >= 16) {
+        strength = "strong";
+      }
+    }
+  }
+  strengthIndicator.setAttribute("data-strength", strength);
+});
