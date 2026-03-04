@@ -140,3 +140,17 @@ resumeClearBtn.addEventListener("click", () => {
   resumePreview.textContent = "";
   resumeDropZone.style.display = "flex";
 });
+
+const allInputs = document.querySelectorAll("input");
+allInputs.forEach((input) => {
+  input.addEventListener("blur", () => {
+    const errorSpan = input.nextElementSibling;
+    if (input.validity.valid) {
+      errorSpan.removeAttribute("data-error");
+    } else {
+      console.log("invalid input")
+      console.log(input.validationMessage);
+      errorSpan.setAttribute("data-error", input.validationMessage);
+    }
+  });
+});
