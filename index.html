@@ -182,6 +182,7 @@
                         id="skills"
                         name="skills"
                         minlength="20"
+                        rows="5"
                         required
                     ></textarea>
                 </div>
@@ -196,24 +197,52 @@
                 <legend>File Upload</legend>
                 <div class="form-field">
                     <label class="form-field-title" for="resume">Resume</label>
-                    <input
-                        type="file"
-                        id="resume"
-                        name="resume"
-                        accept=".pdf"
-                        required
-                    />
+                    <div class="upload-zone">
+                        <label class="drop-zone" id="drop-zone-resume">
+                            Drop .pdf file here, click to upload.
+                            <input
+                                type="file"
+                                class="file-input"
+                                id="resume"
+                                name="resume"
+                                accept=".pdf"
+                                required
+                            />
+                        </label>
+                        <ul id="preview-resume" class="preview"></ul>
+                        <button
+                            type="button"
+                            id="clear-btn-resume"
+                            class="clear-btn"
+                        >
+                            Clear
+                        </button>
+                    </div>
                 </div>
                 <div class="form-field">
                     <label class="form-field-title" for="profilephoto"
                         >Profile Photo</label
                     >
-                    <input
-                        type="file"
-                        id="profilephoto"
-                        name="profile_photo"
-                        accept="image/*"
-                    />
+                    <div class="upload-zone">
+                        <label class="drop-zone" id="drop-zone-profile">
+                            Drop images here, or click to upload.
+                            <input
+                                type="file"
+                                class="file-input"
+                                id="profilephoto"
+                                name="profile_photo"
+                                accept="image/*"
+                            />
+                        </label>
+                        <ul id="preview-profile" class="preview"></ul>
+                        <button
+                            type="button"
+                            id="clear-btn-profile"
+                            class="clear-btn"
+                        >
+                            Clear
+                        </button>
+                    </div>
                 </div>
             </fieldset>
             <fieldset>

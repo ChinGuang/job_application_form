@@ -37,8 +37,11 @@ fieldset {
 input:not([type="checkbox"]):not([type="radio"]),
 .form-options,
 select,
-textarea {
+textarea,
+.upload-zone {
     flex: 2;
+    min-height: 2.5rem;
+    padding: 0 0.5rem;
 }
 
 .form-options {
@@ -51,9 +54,9 @@ textarea {
 
 legend {
     background-color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 1rem;
     border-radius: 1rem;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
@@ -76,6 +79,48 @@ button:hover {
 
 body {
     background-color: lightgrey;
+}
+
+.drop-zone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    height: 12.5rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    color: slategray;
+    cursor: pointer;
+}
+
+.file-input {
+    display: none;
+}
+
+.preview {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    list-style: none;
+    padding: 0;
+}
+
+.preview li {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0;
+    width: 100%;
+    height: 6.25rem;
+}
+
+.preview img {
+    width: 6.25rem;
+    height: 6.25rem;
+    object-fit: cover;
 }
 
 @media (min-width: 768px) {
