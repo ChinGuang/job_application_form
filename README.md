@@ -1,5 +1,7 @@
 Learning purpose with only pure HTML, CSS and JavaScript
 
+Total Development time: about 6.5 hours
+
 ## Attribution
 
 "Abstract geometric logo or infinity line logo for your company"  
