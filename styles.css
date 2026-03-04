@@ -79,6 +79,7 @@ button:hover {
 
 body {
     background-color: lightgrey;
+    padding: 1.5rem 0;
 }
 
 .drop-zone {
